@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<robot name="plastic_water_tank">
+
+	 
+	<link name="water_tank">
+		<inertial>
+			<mass value="1.1" />
+			<origin xyz="0 0 0" />
+			<inertia  ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1" />
+		</inertial>
+		<visual>
+			<origin xyz="0 0 0" rpy="1.57079632679489661923 0 0" />
+			<geometry>
+				<mesh filename="package://husky_atom/meshes/Gtank.dae" />
+			</geometry>
+            <material name="blue">
+                <color rgba="0.0 0.0 0.8 1.0"/>
+            </material>
+		</visual>
+		<collision>
+			<origin xyz="0 0 0" rpy="1.57079632679489661923 0 0" />
+			<geometry>
+                <mesh filename="package://husky_atom/meshes/Gtank.dae" />
+            </geometry>
+		</collision>
+	</link>
+
+    <!--<joint name="wt_to_tpl" type="fixed">
+      <origin xyz="$(arg laser_xyz)" rpy="0 0 0" />
+      <parent link="top_plate_link" />
+      <child link="water_tank" />
+    </joint> -->
+
+
+</robot>  
+
+
