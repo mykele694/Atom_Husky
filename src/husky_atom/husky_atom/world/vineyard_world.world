@@ -1,0 +1,80 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+
+    <!-- A global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- A ground plane -->
+    <include>
+      <uri>model://farming_ground</uri>
+    </include>
+    
+
+    
+    
+
+ <!-- Testing the automatic population of objects -->
+    <population name="can_population1">
+      <model name="vineyard1">
+        <include>
+          <static>true</static>
+          <uri>model://grapevine</uri>
+        </include>
+      </model>
+      <pose>2 2 0 0 0 0</pose>
+      <!--<box>
+        <size>0.8 0.8 2</size>
+      </box>-->
+     
+      <distribution>
+        <type>grid</type>
+        <rows>4</rows>
+        <cols>1</cols>
+        <step>2.5 2.5 0</step>
+      </distribution>
+    </population>
+
+      <model name="wall_1N">    
+        <pose>12 0 0.2 0 0 0</pose>
+        <include>
+          <static>true</static>
+          <uri>model://Stone_Wall02</uri>
+        </include>
+      </model>
+      
+      <model name="wall_2E">    
+        <pose>4.8 -6 0.2 0 0 1.5708</pose>
+        <include>
+          <static>true</static>
+          <uri>model://Stone_Wall02</uri>
+        </include>
+      </model>
+      
+      <model name="wall_3S">    
+        <pose>-6.5 0 0.2 0 0 0</pose>
+        <include>
+          <static>true</static>
+          <uri>model://Stone_Wall02</uri>
+        </include>
+      </model>
+      
+      <model name="wall_4W">    
+        <pose>4.8 10 0.2 0 0 1.5708</pose>
+        <include>
+          <static>true</static>
+          <uri>model://Stone_Wall02</uri>
+        </include>
+      </model>
+      
+      <model name="contadino">    
+        <pose>5.0 -0.65 0 0 0 0</pose>
+        <include>
+          <static>true</static>
+          <uri>model://person_standing</uri>
+        </include>
+      </model>
+    
+  </world>
+</sdf>
